@@ -10,6 +10,7 @@ using namespace std;
 std::ifstream::pos_type filesize(string filename)
 {
 	std::ifstream in(filename, std::ifstream::ate | std::ifstream::binary);
+        if (!in) cout << "File not found!" << endl;
 	return in.tellg();
 }
 
